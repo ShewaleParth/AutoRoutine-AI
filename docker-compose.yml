@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - '8000:8080'
+    env_file: ./backend/.env
+    volumes:
+      - ./backend/daksh-grid-8205adb992dd.json:/app/service-account.json
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/service-account.json
+
+  frontend:
+    build: ./frontend
+    ports:
+      - '3000:3000'
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - backend
