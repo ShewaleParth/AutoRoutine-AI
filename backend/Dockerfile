@@ -22,5 +22,5 @@ COPY . .
 # Use the PORT environment variable provided by Render
 ENV PORT=10000
 
-# Start command (using gunicorn with uvicorn workers is better for production)
-CMD uvicorn api.main:app --host 0.0.0.0 --port $PORT --proxy-headers
+# Start command
+CMD ["sh", "-c", "uvicorn api.main:app --host 0.0.0.0 --port $PORT --proxy-headers"]
