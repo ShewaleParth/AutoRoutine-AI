@@ -19,8 +19,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the app
 COPY . .
 
-# Use the PORT environment variable provided by Render
-ENV PORT=10000
+# Use the PORT environment variable provided by Cloud Run (defaults to 8080)
+ENV PORT=8080
 
 # Start command
 CMD ["sh", "-c", "uvicorn api.main:app --host 0.0.0.0 --port $PORT --proxy-headers"]

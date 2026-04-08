@@ -31,7 +31,11 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware, 
-    allow_origins=['*'],
+    allow_origins=[
+        'http://localhost:3000',
+        'http://localhost:5173',
+        'https://autoroutine-frontend-627691634680.us-central1.run.app'
+    ],
     allow_credentials=True,
     allow_methods=['*'], 
     allow_headers=['*']

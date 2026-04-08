@@ -1,0 +1,12 @@
+.gcloudignore
+.git
+.gitignore
+**/venv/
+**/node_modules/
+**/__pycache__/
+*.txt
+*.json
+!package.json
+!package-lock.json
+!backend/requirements.txt
+!cloudbuild.yaml
