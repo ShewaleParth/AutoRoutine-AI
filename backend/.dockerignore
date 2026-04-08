@@ -1,0 +1,17 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.pytest_cache/
+*.json
+!requirements.txt
+startup_log.txt
+agent_err.txt
+mcp_results.txt
+oauth_err.txt
+test_err.txt
+test_mcp_output.txt
+.git/
+.gitignore
