@@ -1,0 +1,3 @@
+(invalid_grant) Missing code verifier.
+
+http://localhost:8000/api/auth/google/callback?state=demo_user&iss=https://accounts.google.com&code=4/0Aci98E88dewpix-yKezkHdCcdoinwDX_s5AY767SRcsoU01d203i1vLC62X4yvGFi3mOMw&scope=https://www.googleapis.com/auth/calendar
